@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json.schemastore.org/chrome-manifest",
+    "manifest_version": 2,
+    "name": "Facebook AdBlocker",
+	"description": "Hide ads and Suggested on Facebook news feed.",
+    "short_name": "FB AdBlocker",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.facebook.com/*",
+                "https://facebook.com/*"
+            ],
+            "js": ["/js/content.js"],
+            "css": ["/css/content.css"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "256": "/img/icon-256.png"
+    }
+}
